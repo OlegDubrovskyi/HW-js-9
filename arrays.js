@@ -26,9 +26,8 @@
   function cloneArray(array) {
     var clone = [];
       for(var i=0; i < array.length; i++){
-        clone[i] = array[i];
+        clone[i] = array.slice(i,1);
       }
-      
       return clone;
   }
 
@@ -42,12 +41,16 @@
   function removeFalse(array) {
     var cleanedArray = [];
     for(var i=0; i < array.length; i++){
-        if(array[i] !== null || 0 || "" || false || undefined || NaN){
-      
+        if(array[i]!== 0 && array[i]!== false && array[i]!== "" && array[i]!== undefined && isNaN(array[i])!==true){
             cleanedArray[i] = array[i];
         }
       }
-      console.log('cleanedArray '+cleanedArray);
+    for(var i=0; i < cleanedArray.length; i++){
+        if(cleanedArray[i]==undefined){
+          cleanedArray.splice(i, 1);
+          i--;
+        }
+    }
     return cleanedArray;
   }
 
