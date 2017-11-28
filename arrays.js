@@ -26,7 +26,7 @@
   function cloneArray(array) {
     
     if (!isArray(array)) {
-        throw new Error ('Error: Only Arrays allowed!');
+        throw new Error ('Error message');
     }
 
 
@@ -46,7 +46,7 @@
    */
   function removeFalse(array) {
      if (!isArray(array)) {
-       throw new Error('Error: Only Arrays allowed!');
+       throw new Error('Error message');
     }
     var cleanedArray = [];
     for(var i=0; i < array.length; i++){
