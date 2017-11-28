@@ -24,6 +24,12 @@
    Error: Only Arrays allowed!
    */
   function cloneArray(array) {
+    
+    if (!isArray(array)) {
+        throw new Error ('Error: Only Arrays allowed!');
+    }
+
+
     var clone = [];
       for(var i=0; i < array.length; i++){
         clone[i] = array.slice(i,1);
@@ -39,6 +45,9 @@
    Expected result : [15, -22, 47]
    */
   function removeFalse(array) {
+     if (!isArray(array)) {
+       throw new Error('Error: Only Arrays allowed!');
+    }
     var cleanedArray = [];
     for(var i=0; i < array.length; i++){
         if(array[i]!== 0 && array[i]!== false && array[i]!== "" && array[i]!== undefined && isNaN(array[i])!==true){
