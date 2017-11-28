@@ -25,7 +25,7 @@
    */
   function cloneArray(array) {
     
-    if (!isArray(array)) {
+    if (isArray(array)!==true) {
         throw new Error ('Error message');
     }
 
@@ -45,7 +45,7 @@
    Expected result : [15, -22, 47]
    */
   function removeFalse(array) {
-     if (!isArray(array)) {
+     if (isArray(array)!==true) {
        throw new Error('Error message');
     }
     var cleanedArray = [];
